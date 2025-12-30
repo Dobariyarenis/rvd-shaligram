@@ -1,0 +1,113 @@
+.body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 20px;
+}
+
+.h2 {
+    text-align: center;
+}
+
+button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #eef2ff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+ }
+
+.modal-content {
+    background: white;
+    width: 450px;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+}
+
+textarea {
+    resize: none;
+    height: 70px;
+}
+
+.status-new {
+    color: green;
+    font-weight: bold;
+}
+
+.status-old {
+    color: red;
+    font-weight: bold;
+}
+
+.icon {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.child-table {
+    width: 95%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+.child-table th {
+    background: #f1f5f9;
+}
+
+.total-row {
+    font-weight: bold;
+    background: #f9fafb;
+}
+
+.delete-btn {
+    color: red;
+    cursor: pointer;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Management System</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="movie.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Movie Ticket Management System</h2>
+            <button class="btn btn-primary" onclick="openTheaterModal()">Add Theater</button>
+        </div>
+
+        <table id="theaterTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Theater Name</th>
+                    <th>Location</th>
+                    <th>Screens</th>
+                    <th>Status</th>
+                    <th>Launch Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="theaterModal" title="Add / Edit Theater" class="modal">
+        <form id="theaterForm">
+            <input type="hidden" id="theaterId">
+
+            <div class="form-group">
+                <label>Theater Name:</label>
+                <input type="text" id="theaterName">
+                <span id="errTheaterName" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Location:</label>
+                <input type="text" id="location">
+                <span id="errLocation" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Total Screens:</label>
+                <input type="number" id="totalScreens" >
+                <span id="errScreens" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" id="theaterActive" checked> Active</label>
+            </div>
+
+            <div class="form-group">
+                <label>Launch Date:</label>
+                <input type="text" id="launchDate" class="datepicker">
+                <span id="errLaunchDate" class="error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+
+    <div id="movieModal" title="Add / Edit Movie" class="modal">
+        <form id="movieForm">
+            <input type="hidden" id="targetTheaterId">
+            <input type="hidden" id="movieId">
+            <div class="form-group">
+                <label>Movie Title </label>
+                <input type="text" id="movieTitle">
+                <span id="errMovieTitle" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea id="movieDesc"></textarea>
+                <span id="errMovieDesc" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label>Genre:</label>
+                <select id="genre">
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Release Date</label>
+                <input type="text" id="releaseDate" class="datepicker">
+                <span id="errReleaseDate" class="error"></span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <div class="form-group"  >
+                    <label>Duration (mins)</label>
+                    <input type="number" id="duration">
+                    <span id="errDuration" class="error"></span>
+                </div>
+                <div class="form-group"  >
+                    <label>Ticket Price:</label>
+                    <input type="number" step="0.01" id="ticketPrice">
+                    <span id="errTicketPrice" class="error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Discount (%):</label>
+                <input type="number" id="discount"  >
+                <span id="errDiscount" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" id="movieActive" checked> Active</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Movie</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+    <script>
+
+    </script>
+
+    <script src="movie.js"> </script>
+</body>
+
+</html>
